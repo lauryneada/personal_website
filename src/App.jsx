@@ -24,8 +24,36 @@ function Header() {
   return (
     <div className="section">
        <h1>Hey, I'm Lauryne!</h1>
+       <p>I'm a double-degree student studying<mark>computer science</mark>@ the University of Waterloo 
+          and<mark>business administration</mark>@ Wilfrid Laurier University</p>
     </div>
    
+  );
+}
+
+function About() {
+  return (
+    <div className="section">
+      <h2>About Me</h2>
+      <Container>
+        <Row>
+          <Col classname="col-headshot">
+            <img className="headshot" src="/lauryne_headshot.png"></img>
+          </Col>
+          <Col className="col-facts">
+            <p className="fact">I'm interested in the intersection of business and technology, specifically in the areas 
+              of<mark>software engineering</mark>and<mark>data science</mark></p>
+
+            <p className="fact">A goal of mine is to contribute to the intitatives that have encouraged me to pursue a career 
+              in technology, that is why I<mark>mentor</mark> at many Girl Learning Code events from Canada Learning Code</p>
+
+            <p className="fact">I'm<mark>bilingual</mark>! My first language is French and I'm fluent in English 
+            (I also know a bit of Spanish)</p> 
+          </Col>
+        </Row>
+        
+      </Container>
+    </div>
   );
 }
 
@@ -34,6 +62,7 @@ export default function Main() {
     <div>
       <Nav />
       <Header />
+      <About />
     </div>
   );
 }

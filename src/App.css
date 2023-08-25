@@ -10,6 +10,24 @@
 body {
   font-family: 'Outfit', sans-serif;
   color: white;
+  font-weight: 300;
+}
+
+h1 {
+  font-weight:600;
+  font-size: 100px;
+  padding: 10px;
+}
+
+h2{
+  font-weight: 600;
+  font-size:80px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 20px;
 }
 
 .nav-item {
@@ -19,5 +37,27 @@ body {
 }
 
 .section {
-  margin:100px;
+  margin-top:300px;
+  margin-bottom: 300px;
 }
+
+mark {
+  font-weight: 600;
+  color:#CED4DA;
+  background: none;
+}
+
+.fact {
+  text-align: left;
+  border: solid;
+  padding:10px;
+  border-radius: 8px;
+  margin-bottom: 60px;
+}
+
+.headshot {
+  max-width: 60%;
+  height:auto;
+  border-radius: 10px;
+}
+
