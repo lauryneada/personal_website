@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import './App.scss'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -57,12 +57,31 @@ function About() {
   );
 }
 
+function Experience() {
+  return (
+    <h2>My Experience</h2>
+  );
+}
+
+function Projects() {
+  return (
+    <div className="section">
+      <h2>Projects</h2>
+      <div className="card">
+        <img src="/portfolio.png">
+        </img>
+      </div>
+    </div>
+  );
+}
+
 export default function Main() {
   return (
     <div>
       <Nav />
       <Header />
       <About />
+      <Projects />
     </div>
   );
 }
