@@ -63,14 +63,57 @@ function Experience() {
   );
 }
 
+function Card({project}) {
+  return (
+    <div className="card">
+
+        <div classname="card-img">
+          <img src="/portfolio.png"></img>
+        </div>
+        
+        <div className="card-content">
+          <h3>{project.title}</h3>
+
+          <p className="tech">{project.technologies.join(" ")}</p>
+
+          <p className="body">{project.body}</p>
+        </div>
+
+        <div className="cardfooter">
+          <Row>
+            <Col>
+              <img src="github.svg"></img>
+            </Col>
+            <Col>
+              <img src="link.svg"></img>
+            </Col>
+          </Row>
+        </div>  
+    </div>
+  );
+}
+
 function Projects() {
   return (
     <div className="section">
       <h2>Projects</h2>
-      <div className="card">
-        <img src="/portfolio.png">
-        </img>
-      </div>
+      <Row>
+        <Col>
+          <Card project = {{ title: "Portfolio Website", 
+                               technologies: ["React", "Javascript", "HTML", "SCSS"],
+                               body : "The website you're currently on! This is a project I worked on to practice using React which I recently" 
+                               + "started learning and plan to update as I learn more",
+                                }}/>
+        </Col>
+        <Col>
+          <Card project = {{ title: "Portfolio Website", 
+                               technologies: ["React", "Javascript", "HTML", "SCSS"],
+                               body : "The website you're currently on! This is a project I worked on to practice using React which I recently" 
+                               + "started learning and plan to update as I learn more",
+                                }}/>
+        </Col>
+
+      </Row>
     </div>
   );
 }
