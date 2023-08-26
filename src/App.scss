@@ -36,9 +36,18 @@ p {
   font-size: 20px;
 }
 
+.sectionheader {
+  left:0;
+  right:0;
+  top:0;
+  position: absolute;
+}
+
 .nav-item {
   padding-left: 50px;
   padding-right: 50px;
+  padding-bottom:10px;
+  padding-top:15px;
   font-size: 18px;
 }
 
@@ -67,18 +76,23 @@ mark {
   border-radius: 10px;
 }
 
+.col-card {
+  display: flex;
+  justify-content: center;
+}
+
 .card {
   width: 350px;
-  height: 475px;
+  height: 525px;
   background-color: #CED4DA;
   border-radius: 8px;
   display:flex;
   padding: 15px;
   
-
-  img {
-    max-width: 100%;
-    height:auto;
+  .desc {
+    width: 320px;
+    height:150px;
+    object-fit:cover;
     border-radius: 4px;
     margin-bottom: 10px;
   }
@@ -91,15 +105,54 @@ mark {
   }
 
   .body{
+    width: 320px;
+    height: 175px;
+    object-fit: cover;
     font-size: 18px;
-    padding:10px
+    padding:10px;
   }
 
-  .cardfooter{
-    padding-left:100px;
-    padding-right:100px;
+  .row-cardfooter{
+    display:flex;
+    justify-content: center;
   }
 
 }
 
+.row-project{
+  display: flex;
+  justify-content: center;
+}
+
+.contact-logo{
+  width: 30%;
+  height:auto;
+  padding:25px;
+  border-radius: 8px;
+}
+
+
+.endtext{
+  font-size: 15px;
+  margin:5px;
+}
+
+.endtext-top{
+  font-size: 17px;
+  margin:5px;
+}
+
+.sectioncontact{
+  margin-bottom: 200px;
+}
+
+
+.sectionfooter{
+  position: absolute;
+  left:0;
+  right:0;
+  border-top: ridge 1px;
+  background-color: #5d666f;
+  padding:10px;
+}
 
