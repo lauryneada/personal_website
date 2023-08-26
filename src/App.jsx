@@ -68,7 +68,7 @@ function Card({project}) {
     <div className="card">
 
         <div classname="card-img">
-          <img src="/portfolio.png"></img>
+          <img src={project.img}></img>
         </div>
         
         <div className="card-content">
@@ -99,18 +99,12 @@ function Projects() {
       <h2>Projects</h2>
       <Row>
         <Col>
-          <Card project = {{ title: "Portfolio Website", 
-                               technologies: ["React", "Javascript", "HTML", "SCSS"],
-                               body : "The website you're currently on! This is a project I worked on to practice using React which I recently" 
-                               + "started learning and plan to update as I learn more",
-                                }}/>
-        </Col>
-        <Col>
-          <Card project = {{ title: "Portfolio Website", 
-                               technologies: ["React", "Javascript", "HTML", "SCSS"],
-                               body : "The website you're currently on! This is a project I worked on to practice using React which I recently" 
-                               + "started learning and plan to update as I learn more",
-                                }}/>
+          <Card project = {{ img : "/portfolio.png",
+                             title: "Portfolio Website", 
+                             technologies: ["React", "Javascript", "HTML", "SCSS"],
+                             body : "The website you're currently on! This is a project I worked on to practice using React which I recently" 
+                                  + "started learning and plan to update as I learn more",
+                          }}/>
         </Col>
 
       </Row>
