@@ -36,18 +36,7 @@ p {
   font-size: 20px;
 }
 
-.sectionheader {
-  left:0;
-  right:0;
-  top:0;
-  position: absolute;
-}
-
 .nav-item {
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom:10px;
-  padding-top:15px;
   font-size: 18px;
 }
 
@@ -60,6 +49,7 @@ mark {
   font-weight: 600;
   color:#CED4DA;
   background: none;
+  font-size:20px;
 }
 
 .fact {
@@ -154,5 +144,58 @@ mark {
   border-top: ridge 1px;
   background-color: #5d666f;
   padding:10px;
+}
+
+.experience{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding-top: 15px;
+  border-radius: 8px;
+  margin-bottom: 35px;
+
+  p {
+    text-align: start;
+  }
+
+  .maininfo{
+    font-size:24px;
+    margin-bottom: 5px;
+  }
+
+  
+  b {
+    font-weight: 600;
+    color:#CED4DA;
+    font-size:24px;
+    padding-left: 15px;
+  }
+  
+  .arrow-down{
+    background-color: #495057;
+    border:none;
+  }
+
+  .date{
+    font-size: 20px;
+    color: #CED4DA;
+    padding-left: 15px;
+  }
+
+  .moreinfo{
+    padding-top: 0px;
+    margin-top: 0px;
+    font-size:20px ;
+  }
+
+  .tools{
+    font-weight: 600;
+    padding-top: 0px;
+    margin-bottom: 5px;
+  }
+}
+
+.linebreak {
+  background-color: red;
 }
 

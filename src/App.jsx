@@ -24,7 +24,7 @@ function Header() {
   return (
     <div className="section">
        <h1>Hey, I'm Lauryne!</h1>
-       <p>I'm a double-degree student studying<mark>computer science</mark>@ the University of Waterloo 
+       <p class="intro">I'm a double-degree student studying<mark>computer science</mark>@ the University of Waterloo 
           and<mark>business administration</mark>@ Wilfrid Laurier University</p>
     </div>
    
@@ -57,9 +57,80 @@ function About() {
   );
 }
 
+function RowExperience({job}) {
+  const [showMore, setShowMore] = useState(false);
+
+  function handleClick() {
+    setShowMore(!showMore);
+  }
+
+  const bulletpoints = job.bullets.map(bullet => <li>{bullet}</li>);
+  
+  return(
+    <>
+    <Row className="experience">
+      <Col md="3" className="col-experience">
+        <p className="maininfo"><b>{job.company}</b></p>
+        {showMore && <p className="date">{job.date}</p>}
+      </Col>
+      <Col md="7" className="col-experience">
+        <p className="maininfo">{job.title} <br></br></p><p className="tools">{job.tools}</p>
+        {showMore && <p className="moreinfo">
+                      <ul>{bulletpoints}</ul>
+                      <p className="tools"></p></p>}
+      </Col>
+      <Col md="1">
+        <button className="arrow-down" onClick={handleClick}>
+          {showMore ? <img src="minus.svg"></img> : <img src="arrowdown.svg"></img>}
+        </button>
+      </Col>
+    </Row>
+    <hr className="linebreak"></hr>
+    </>
+  );
+}
+
 function Experience() {
+  
   return (
-    <h2>My Experience</h2>
+    <div className="section">
+      <h2>My Experience</h2>
+
+      <RowExperience job={{ company: "STEMchats",
+                            title: "Technology Coordinator",
+                            date: "2021-2022",
+                            bullets: ["Developed responsive websites using HTML & SCSS along with Bootstrap",
+                                      "Implemented a web scraping feature using Python to fetch and store the website’s content",
+                                      "Designed wireframes for new websites which improved efficiency when developing collaboratively"],
+                            tools: "Tools: HTML, SCSS, Bootstrap, Javascript, Firebase, Python" }} />
+
+      <RowExperience job={{ company: "Correlation One",
+                            title: "Data Science 4 All Fellow",
+                            date: "Apr - Aug 2021",
+                            bullets: ["Analyzed the issue of food insecurity through data cleaning and exploratory data analysis with Python and Jupyter",
+                                      "Enhanced the project with data visualization on an interactive Tableau dashboard and a detailed report of the research",
+                                      "Graduated with honours from the program and the final project was nominated a “Crowd Favorite”"],
+                            tools: "Tools: Python, Pandas, Seaborn, Matplotlib, Jupyter Notebook, Tableau" }} />
+
+      <RowExperience job={{ company: "Altimex Consulting",
+                            title: "Social Media Manager",
+                            date: "2020-2021",
+                            bullets: ["Implemented a digital marketing plan to grow a small business’ online presence",
+                                      "Managed multiple social media pages and used in-app analytics to track important key performance indicators",
+                                      "Created content catered to their target audience through articles on the website using WordPress"],
+                            tools: "Tools: WordPress, Meta Business Suite, Adobe InDesign, Adobe Premiere Pro" }} />
+      
+      <RowExperience job={{ company: "Canada Learning Code",
+                            title: "Teen Ambassador",
+                            date: "2019-2022",
+                            bullets: ["Led a team of 5 to develop a website with exercises to combat teens’ stress levels and won 1st place in the hackathon",
+                                      "Created a medium-fidelity prototype for a productivity application",
+                                      "Mentored at Girls Learning Code workshops, providing assistance and feedback to young coders"],
+                            tools: "Tools: HTML, CSS, Javascript" }} />
+
+    </div>
+    
+
   );
 }
 
@@ -178,6 +249,7 @@ export default function Main() {
       <Nav />
       <Header />
       <About />
+      <Experience />
       <Projects />
       <Contact />
       <Footer />
