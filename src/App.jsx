@@ -25,6 +25,9 @@ function Header() {
     <div className="section">
       <Fade cascade>
        <h1>Hey, I'm Lauryne!</h1>
+      </Fade>
+
+      <Fade>
        <p class="intro">I'm a double-degree student studying<mark>computer science</mark>@ the University of Waterloo 
           and<mark>business administration</mark>@ Wilfrid Laurier University</p>
       </Fade>
@@ -42,7 +45,7 @@ function About() {
       <Container>
         <Row>
           <Col classname="col-headshot">
-            <img className="headshot" src="/lauryne_headshot.png"></img>
+            <img className="headshot" src="lauryne_headshot.png"></img>
           </Col>
 
           
@@ -201,7 +204,7 @@ function Projects() {
       <Row>
       
         <Col className="col-card">
-          <Card project = {{ img : "/portfolio.png",
+          <Card project = {{ img : "portfolio.png",
                              title: "Portfolio Website", 
                              technologies: ["React", "Javascript", "HTML", "SCSS"],
                              body : "The website you're currently on! This is a project I worked on to practice using React which I recently" 
@@ -214,7 +217,7 @@ function Projects() {
         </Col>
 
         <Col className="col-card">
-          <Card project = {{ img : "/studyspace.png",
+          <Card project = {{ img : "studyspace.png",
                              title: "StudySpace", 
                              technologies: ["Javascript", "HTML", "SCSS"],
                              body : "StudySpace is a productivity chrome extension that won 2nd place at the Queen's Programming Challenge in 2021",
@@ -228,7 +231,7 @@ function Projects() {
         </Col>
 
         <Col className="col-card">
-          <Card project = {{ img : "/datascience.png",
+          <Card project = {{ img : "datascience.png",
                              title: "Data Analysis Project", 
                              technologies: ["Python", "Pandas", "Seaborn", "Matplotlib"],
                              body : "As part of DS4A, I contributed to a data analysis of the impact COVID-19 had on food insecurity." +
@@ -258,14 +261,14 @@ function Contact() {
       <Row className="row-contact">
         <Col className="contacticon">
           <Bounce>
-          <a href="https://www.linkedin.com/in/lauryne-assa/" target="_blank"> <img className="contact-logo" src="/linkedin.png"></img> </a>
+          <a href="https://www.linkedin.com/in/lauryne-assa/" target="_blank"> <img className="contact-logo" src="linkedin.png"></img> </a>
           </Bounce>
         </Col>
         <Col className="contacticon">
-          <a href="https://github.com/lauryneada" target="_blank"> <img className="contact-logo" src="/github-logo.png"></img></a>
+          <a href="https://github.com/lauryneada" target="_blank"> <img className="contact-logo" src="github-logo.png"></img></a>
         </Col>
         <Col className="contacticon">
-          <a href="mailto:lauryne.assa@gmail.com" target="_blank"><img className="contact-logo" src="/gmail.png"></img> </a>
+          <a href="mailto:lauryne.assa@gmail.com" target="_blank"><img className="contact-logo" src="gmail.png"></img> </a>
         </Col>
       </Row>
       </Slide>
