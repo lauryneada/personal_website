@@ -11,10 +11,10 @@ function Nav() {
   return (
     <Container>
       <Row className="sectionheader">
-        <Col className="nav-item">about</Col>
-        <Col className="nav-item">experience</Col>
-        <Col className="nav-item">projects</Col>
-        <Col className="nav-item">contact</Col>
+        <Col className="nav-item"><a href="#about">about</a></Col>
+        <Col className="nav-item"><a href="#experience">experience</a></Col>
+        <Col className="nav-item"><a href="#projects">projects</a></Col>
+        <Col className="nav-item"><a href="#contact">contact</a></Col>
       </Row>
     </Container>
   );
@@ -33,7 +33,7 @@ function Header() {
 
 function About() {
   return (
-    <div className="section">
+    <div id="about" className="section">
       <h2>About Me</h2>
       <Container>
         <Row>
@@ -93,7 +93,7 @@ function RowExperience({job}) {
 function Experience() {
   
   return (
-    <div className="section">
+    <div id ="experience" className="section">
       <h2>My Experience</h2>
 
       <RowExperience job={{ company: "STEMchats",
@@ -158,10 +158,10 @@ function CardFooter({apps}) {
   return (
     <div className="cardfooter">
       <Row className="row-cardfooter">
-        {apps.github && (<Col md="auto"> <img src="github.svg"></img> </Col>)}
-        {apps.chrome && (<Col md="auto"> <img src="chrome.svg"></img> </Col>)}
-        {apps.tableau && (<Col md="auto"> <img src="graph.svg"></img> </Col>)}
-        {apps.link && (<Col md="auto"> <img src="link.svg"></img> </Col>)}
+        {apps.github && (<Col className="icon" md="auto"> <a href={apps.github[1]} target="_blank"> <img src="github.svg"></img> </a> </Col>)}
+        {apps.chrome && (<Col className="icon" md="auto"> <a href={apps.chrome[1]} target="_blank"> <img src="chrome.svg"></img> </a> </Col>)}
+        {apps.tableau && (<Col className="icon" md="auto"> <a href={apps.tableau[1]} target="_blank"> <img src="graph.svg"></img> </a> </Col>)}
+        {apps.link && (<Col className="icon" md="auto"> <a href={apps.link[1]} target="_blank"> <img src="link.svg"></img> </a> </Col>)}
       </Row>
     </div>  
   );
@@ -169,7 +169,7 @@ function CardFooter({apps}) {
 
 function Projects() {
   return (
-    <div className="section">
+    <div id="projects" className="section">
       <h2>Projects</h2>
       <Row>
         <Col className="col-card">
@@ -180,7 +180,7 @@ function Projects() {
                                   + "started learning and plan to update as I learn more",
                           }}>
 
-            <CardFooter apps={{github: true, link: true}}/>
+            <CardFooter apps={{ github:[true, "https://github.com/lauryneada/portfolio-website"] }}/>
 
           </Card>
         </Col>
@@ -192,7 +192,9 @@ function Projects() {
                              body : "StudySpace is a productivity chrome extension that won 2nd place at the Queen's Programming Challenge in 2021",
                           }}>
             
-            <CardFooter apps={{github: true, chrome: true, link:true}}/>
+            <CardFooter apps={{ github:[true, "https://github.com/lauryneada/yourspace"], 
+                                chrome: [true, "https://chrome.google.com/webstore/detail/yourspace/hbnjcjicdodldbfjcplllfdimjoocjmk?utm_source=app-launcher&authuser=0"], 
+                                link: [true, "https://lauryneada.github.io/yourspace/"] }}/>
           
           </Card>
         </Col>
@@ -205,7 +207,8 @@ function Projects() {
                                     "The project includes a report, datafolio, tableau dashboard and presentation all available on Github.",
                           }}>
 
-            <CardFooter apps={{github: true, tableau: true}}/>
+          <CardFooter apps={{ github: [true, "https://github.com/lauryneada/COVID19_FoodInsecurity"], 
+                              tableau: [true, "https://public.tableau.com/app/profile/lauryne/viz/TheImpactofCOVID-19onFoodInsecurity/FinalDashboard"] }}/>
 
           </Card>
         </Col>
@@ -217,17 +220,17 @@ function Projects() {
 
 function Contact() {
   return(
-    <div className="sectioncontact">
+    <div id="contact" className="sectioncontact">
       <h2>Contact Me</h2>
       <Row className="row-contact">
-        <Col>
-          <img className="contact-logo" src="/linkedin.png"></img>
+        <Col className="contacticon">
+          <a href="https://www.linkedin.com/in/lauryne-assa/" target="_blank"> <img className="contact-logo" src="/linkedin.png"></img> </a>
         </Col>
-        <Col>
-          <img className="contact-logo" src="/github-logo.png"></img>
+        <Col className="contacticon">
+          <a href="https://github.com/lauryneada" target="_blank"> <img className="contact-logo" src="/github-logo.png"></img></a>
         </Col>
-        <Col>
-          <img className="contact-logo" src="/gmail.png"></img>
+        <Col className="contacticon">
+          <a href="mailto:lauryne.assa@gmail.com" target="_blank"><img className="contact-logo" src="/gmail.png"></img> </a>
         </Col>
       </Row>
     </div>
