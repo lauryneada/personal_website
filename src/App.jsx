@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.scss'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
+import Bounce from 'react-reveal/Slide';
 
 function Nav() {
   return (
@@ -23,9 +23,11 @@ function Nav() {
 function Header() {
   return (
     <div className="section">
+      <Fade cascade>
        <h1>Hey, I'm Lauryne!</h1>
        <p class="intro">I'm a double-degree student studying<mark>computer science</mark>@ the University of Waterloo 
           and<mark>business administration</mark>@ Wilfrid Laurier University</p>
+      </Fade>
     </div>
    
   );
@@ -34,25 +36,37 @@ function Header() {
 function About() {
   return (
     <div id="about" className="section">
+      <Fade cascade>
       <h2>About Me</h2>
+      </Fade>
       <Container>
         <Row>
           <Col classname="col-headshot">
             <img className="headshot" src="/lauryne_headshot.png"></img>
           </Col>
+
+          
           <Col className="col-facts">
+            <Fade right>
             <p className="fact">I'm interested in the intersection of business and technology, specifically in the areas 
               of<mark>software engineering</mark>and<mark>data science</mark></p>
+            </Fade>
 
+            <Fade right>
             <p className="fact">A goal of mine is to contribute to the intitatives that have encouraged me to pursue a career 
               in technology, that is why I<mark>mentor</mark> at many Girl Learning Code events from Canada Learning Code</p>
+            </Fade>
 
+            <Fade right>
             <p className="fact">I'm<mark>bilingual</mark>! My first language is French and I'm fluent in English 
             (I also know a bit of Spanish)</p> 
+            </Fade>
+            
           </Col>
         </Row>
         
       </Container>
+      
     </div>
   );
 }
@@ -94,8 +108,11 @@ function Experience() {
   
   return (
     <div id ="experience" className="section">
+      <Fade cascade>
       <h2>My Experience</h2>
+      </Fade>
 
+      <Slide bottom>
       <RowExperience job={{ company: "STEMchats",
                             title: "Technology Coordinator",
                             date: "2021-2022",
@@ -103,7 +120,9 @@ function Experience() {
                                       "Implemented a web scraping feature using Python to fetch and store the website’s content",
                                       "Designed wireframes for new websites which improved efficiency when developing collaboratively"],
                             tools: "Tools: HTML, SCSS, Bootstrap, Javascript, Firebase, Python" }} />
+      </Slide>
 
+      <Slide bottom>
       <RowExperience job={{ company: "Correlation One",
                             title: "Data Science 4 All Fellow",
                             date: "Apr - Aug 2021",
@@ -111,7 +130,9 @@ function Experience() {
                                       "Enhanced the project with data visualization on an interactive Tableau dashboard and a detailed report of the research",
                                       "Graduated with honours from the program and the final project was nominated a “Crowd Favorite”"],
                             tools: "Tools: Python, Pandas, Seaborn, Matplotlib, Jupyter Notebook, Tableau" }} />
+      </Slide>
 
+      <Slide bottom>
       <RowExperience job={{ company: "Altimex Consulting",
                             title: "Social Media Manager",
                             date: "2020-2021",
@@ -119,7 +140,9 @@ function Experience() {
                                       "Managed multiple social media pages and used in-app analytics to track important key performance indicators",
                                       "Created content catered to their target audience through articles on the website using WordPress"],
                             tools: "Tools: WordPress, Meta Business Suite, Adobe InDesign, Adobe Premiere Pro" }} />
+      </Slide>
       
+      <Slide bottom>
       <RowExperience job={{ company: "Canada Learning Code",
                             title: "Teen Ambassador",
                             date: "2019-2022",
@@ -127,7 +150,7 @@ function Experience() {
                                       "Created a medium-fidelity prototype for a productivity application",
                                       "Mentored at Girls Learning Code workshops, providing assistance and feedback to young coders"],
                             tools: "Tools: HTML, CSS, Javascript" }} />
-
+      </Slide>
     </div>
     
 
@@ -170,8 +193,13 @@ function CardFooter({apps}) {
 function Projects() {
   return (
     <div id="projects" className="section">
+      <Fade cascade>
       <h2>Projects</h2>
+      </Fade>
+
+      <Slide bottom>
       <Row>
+      
         <Col className="col-card">
           <Card project = {{ img : "/portfolio.png",
                              title: "Portfolio Website", 
@@ -214,6 +242,7 @@ function Projects() {
         </Col>
 
       </Row>
+      </Slide>
     </div>
   );
 }
@@ -221,10 +250,16 @@ function Projects() {
 function Contact() {
   return(
     <div id="contact" className="sectioncontact">
+      <Fade cascade>
       <h2>Contact Me</h2>
+      </Fade>
+
+      <Slide bottom>
       <Row className="row-contact">
         <Col className="contacticon">
+          <Bounce>
           <a href="https://www.linkedin.com/in/lauryne-assa/" target="_blank"> <img className="contact-logo" src="/linkedin.png"></img> </a>
+          </Bounce>
         </Col>
         <Col className="contacticon">
           <a href="https://github.com/lauryneada" target="_blank"> <img className="contact-logo" src="/github-logo.png"></img></a>
@@ -233,6 +268,7 @@ function Contact() {
           <a href="mailto:lauryne.assa@gmail.com" target="_blank"><img className="contact-logo" src="/gmail.png"></img> </a>
         </Col>
       </Row>
+      </Slide>
     </div>
   );
 }
