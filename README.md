@@ -1,6 +1,6 @@
 # My personal website
 
-This is my first ReactJs project which I plan to keep updating as I learn more.\
+This is my first ReactJs project which I plan to keep updating as I learn more.
 
 Future updates may include:
 
