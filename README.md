@@ -4,5 +4,6 @@ This is my first ReactJs project which I plan to keep updating as I learn more.
 
 Future updates may include:
 
+- [ ] Responsiveness for mobile, wide screens and tablets
 - [ ] A way to consistently access other sections along the page
-- [ ] Animations scrolling back up
+- [ ] Animations when scrolling back up
