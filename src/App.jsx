@@ -5,18 +5,19 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
-import Bounce from 'react-reveal/Slide';
 
 function Nav() {
   return (
-    <Container>
-      <Row className="sectionheader">
-        <Col className="nav-item"><a href="#about">about</a></Col>
-        <Col className="nav-item"><a href="#experience">experience</a></Col>
-        <Col className="nav-item"><a href="#projects">projects</a></Col>
-        <Col className="nav-item"><a href="#contact">contact</a></Col>
-      </Row>
-    </Container>
+    <div>
+      <Container>
+        <Row className="sectionheader">
+          <Col className="nav-item"><a href="#about">about</a></Col>
+          <Col className="nav-item"><a href="#experience">experience</a></Col>
+          <Col className="nav-item"><a href="#projects">projects</a></Col>
+          <Col className="nav-item"><a href="#contact">contact</a></Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 
@@ -39,6 +40,8 @@ function Header() {
 function About() {
   return (
     <div id="about" className="section">
+      <br></br>
+  
       <Fade cascade>
       <h2>About Me</h2>
       </Fade>
@@ -111,6 +114,8 @@ function Experience() {
   
   return (
     <div id ="experience" className="section">
+      <br></br>
+
       <Fade cascade>
       <h2>My Experience</h2>
       </Fade>
@@ -196,6 +201,8 @@ function CardFooter({apps}) {
 function Projects() {
   return (
     <div id="projects" className="section">
+      <br></br>
+
       <Fade cascade>
       <h2>Projects</h2>
       </Fade>
@@ -207,8 +214,8 @@ function Projects() {
           <Card project = {{ img : "portfolio.png",
                              title: "Portfolio Website", 
                              technologies: ["React", "Javascript", "HTML", "SCSS"],
-                             body : "The website you're currently on! This is a project I worked on to practice using React which I recently" 
-                                  + "started learning and plan to update as I learn more",
+                             body : "The website you're currently on! This is a project I worked on to practice my Javascript and learn how to use React" 
+                                  + " and plan to update as I learn more",
                           }}>
 
             <CardFooter apps={{ github:[true, "https://github.com/lauryneada/portfolio-website"] }}/>
@@ -235,7 +242,7 @@ function Projects() {
                              title: "Data Analysis Project", 
                              technologies: ["Python", "Pandas", "Seaborn", "Matplotlib"],
                              body : "As part of DS4A, I contributed to a data analysis of the impact COVID-19 had on food insecurity." +
-                                    "The project includes a report, datafolio, tableau dashboard and presentation all available on Github.",
+                                    " The project includes a report, datafolio, tableau dashboard and presentation all available on Github.",
                           }}>
 
           <CardFooter apps={{ github: [true, "https://github.com/lauryneada/COVID19_FoodInsecurity"], 
@@ -260,9 +267,7 @@ function Contact() {
       <Slide bottom>
       <Row className="row-contact">
         <Col className="contacticon">
-          <Bounce>
           <a href="https://www.linkedin.com/in/lauryne-assa/" target="_blank"> <img className="contact-logo" src="linkedin.png"></img> </a>
-          </Bounce>
         </Col>
         <Col className="contacticon">
           <a href="https://github.com/lauryneada" target="_blank"> <img className="contact-logo" src="github-logo.png"></img></a>
