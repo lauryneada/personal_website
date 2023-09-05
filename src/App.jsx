@@ -212,7 +212,7 @@ function Projects() {
       
         <Col className="col-card">
           <Card project = {{ img : "portfolio.png",
-                             title: "Portfolio Website", 
+                             title: "Personal Website", 
                              technologies: ["React", "Javascript", "HTML", "SCSS"],
                              body : "The website you're currently on! This is a project I worked on to practice my Javascript and learn how to use React" 
                                   + " and plan to update as I learn more",
