@@ -31,6 +31,7 @@ function Header() {
       <Fade>
        <p class="intro">I'm a double-degree student studying<mark>computer science</mark>@ the University of Waterloo 
           and<mark>business administration</mark>@ Wilfrid Laurier University</p>
+       <p class="intro"> Currently looking for Winter 2025 Internships</p>
       </Fade>
     </div>
    
@@ -54,12 +55,11 @@ function About() {
           
           <Col className="col-facts">
             <Fade right>
-            <p className="fact">I'm interested in the intersection of business and technology, specifically in the areas 
-              of<mark>software engineering</mark>and<mark>data science</mark></p>
+            <p className="fact">I'm interested in the intersection of business and technology, so I'm working towards building a career that blends <mark>software engineering</mark>and<mark>finance</mark></p>
             </Fade>
 
             <Fade right>
-            <p className="fact">A goal of mine is to contribute to the intitatives that have encouraged me to pursue a career 
+            <p className="fact">A goal of mine is to contribute to the initiatives that have encouraged me to pursue a career 
               in technology, that is why I<mark>mentor</mark> at many Girl Learning Code events from Canada Learning Code</p>
             </Fade>
 
@@ -121,6 +121,17 @@ function Experience() {
       </Fade>
 
       <Slide bottom>
+      <RowExperience job={{ company: "RBC Capital Markets",
+                            title: "Quantitative Technology Services Software Developer Intern",
+                            date: "Jan - Apr 2024",
+                            bullets: ["Implemented multiple production level workflows on Airflow (Python) that performed automated push reporting to improve the data accuracy of a $400M+ portfolio",
+                                      "Maintained 3+ databases on Microsoft SQL Server by writing queries to backfill missing data, adding new fields and updating records",
+                                      "Integrated the Tableau REST API and an AWS S3 Bucket into Airflow to provide automated pull reporting centralized on a single platform, increasing analysis efficiency by 15%",
+                                      "Worked directly with directors, project managers and business managers to transform business objectives into technical solutions that were implemented, presented and delivered beating deadlines"],
+                            tools: "Tools: Python, SQL, Airflow, Microsoft SQL Server, Github, Helios, AWS" }} />
+      </Slide>
+
+      <Slide bottom>
       <RowExperience job={{ company: "STEMchats",
                             title: "Technology Coordinator",
                             date: "2021-2022",
@@ -140,7 +151,7 @@ function Experience() {
                             tools: "Tools: Python, Pandas, Seaborn, Matplotlib, Jupyter Notebook, Tableau" }} />
       </Slide>
 
-      <Slide bottom>
+      {/* <Slide bottom>
       <RowExperience job={{ company: "Altimex Consulting",
                             title: "Social Media Manager",
                             date: "2020-2021",
@@ -148,7 +159,7 @@ function Experience() {
                                       "Managed multiple social media pages and used in-app analytics to track important key performance indicators",
                                       "Created content catered to their target audience through articles on the website using WordPress"],
                             tools: "Tools: WordPress, Meta Business Suite, Adobe InDesign, Adobe Premiere Pro" }} />
-      </Slide>
+      </Slide> */}
       
       <Slide bottom>
       <RowExperience job={{ company: "Canada Learning Code",
