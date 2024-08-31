@@ -257,7 +257,8 @@ function Projects() {
                           }}>
 
           <CardFooter apps={{ github: [true, "https://github.com/lauryneada/COVID19_FoodInsecurity"], 
-                              tableau: [true, "https://public.tableau.com/app/profile/lauryne/viz/TheImpactofCOVID-19onFoodInsecurity/FinalDashboard"] }}/>
+                              tableau: [true, "https://public.tableau.com/app/profile/lauryne/viz/TheImpactofCOVID-19onFoodInsecurity/FinalDashboard"],
+                              link: [true, "https://www.correlation-one.com/blog/ds4a-capstone-project-spotlight-crowd-favorites"] }}/>
 
           </Card>
         </Col>
@@ -296,7 +297,7 @@ function Footer() {
   return(
     <div className="sectionfooter">
       <p className="endtext-top">Built & designed by Lauryne 👩🏾‍💻</p>
-      <p className="endtext">© 2023 Lauryne Assa</p>
+      <p className="endtext">© 2024 Lauryne Assa</p>
     </div>
   )
 }
