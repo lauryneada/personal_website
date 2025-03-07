@@ -29,9 +29,9 @@ function Header() {
       </Fade>
 
       <Fade>
-       <p class="intro">I'm a double-degree student in<mark>computer science</mark>@ the University of Waterloo 
+       <p className="intro">I'm a double-degree student in<mark>computer science</mark>@ the University of Waterloo 
           and<mark>business administration</mark>@ Wilfrid Laurier University</p>
-       <p class="currently"> Currently: QTS Software Developer Intern @ RBC </p>
+       <p className="currently"> Currently: QTS Software Developer Intern @ RBC </p>
       </Fade>
     </div>
    
