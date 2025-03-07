@@ -79,6 +79,21 @@ mark {
   font-size:20px;
 }
 
+.currently{
+  margin: auto;
+  margin-top: 30px;
+  background-color:#41484E;
+  padding: 10px 20px 10px 20px;
+  width:fit-content;
+  border-radius: 50px;
+
+  border: 1px solid white;
+}
+
+.currently:hover{
+  background-color: #5d666f ;
+}
+
 .fact {
   text-align: left;
   border: 1px solid;
@@ -257,9 +272,6 @@ mark {
   }
 }
 
-.linebreak {
-  background-color: red;
-}
 
 @media (max-width:500px) {
   h1 {

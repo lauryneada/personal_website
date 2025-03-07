@@ -29,9 +29,9 @@ function Header() {
       </Fade>
 
       <Fade>
-       <p class="intro">I'm a double-degree student studying<mark>computer science</mark>@ the University of Waterloo 
+       <p class="intro">I'm a double-degree student in<mark>computer science</mark>@ the University of Waterloo 
           and<mark>business administration</mark>@ Wilfrid Laurier University</p>
-       {/* <p class="intro"> Currently looking for Winter 2025 Internships</p> */}
+       <p class="currently"> Currently: QTS Software Developer Intern @ RBC </p>
       </Fade>
     </div>
    
@@ -55,17 +55,16 @@ function About() {
           
           <Col className="col-facts">
             <Fade right>
-            <p className="fact">I'm interested in the intersection of business and technology, so I'm working towards building a career that blends <mark>software engineering</mark>and<mark>finance</mark></p>
+            <p className="fact">I'm interested in the intersection of business and technology, so I'm working towards building a career that blends<mark>software engineering</mark>and<mark>finance</mark></p>
             </Fade>
 
             <Fade right>
             <p className="fact">A goal of mine is to contribute to the initiatives that have encouraged me to pursue a career 
-              in technology, that is why I<mark>mentor</mark> at Girl Learning Code events from Canada Learning Code</p>
+              in technology, that's why I<mark>mentor</mark>at Girl Learning Code events from Canada Learning Code</p>
             </Fade>
 
             <Fade right>
-            <p className="fact">I'm<mark>bilingual</mark>! My first language is French and I'm fluent in English 
-            (I also know a bit of Spanish)</p> 
+            <p className="fact">I'm<mark>bilingual</mark>! I'm a French native, fluent in English and I'm learning Spanish</p> 
             </Fade>
             
           </Col>
