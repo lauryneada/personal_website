@@ -25,13 +25,13 @@ function Header() {
   return (
     <div className="section">
       <Fade cascade>
-       <h1>Hey, I'm Lauryne!</h1>
+       <h1 className="hey">Hey, I'm Lauryne!</h1>
       </Fade>
 
       <Fade>
        <p class="intro">I'm a double-degree student studying<mark>computer science</mark>@ the University of Waterloo 
           and<mark>business administration</mark>@ Wilfrid Laurier University</p>
-       <p class="intro"> Currently looking for Winter 2025 Internships</p>
+       {/* <p class="intro"> Currently looking for Winter 2025 Internships</p> */}
       </Fade>
     </div>
    
@@ -60,7 +60,7 @@ function About() {
 
             <Fade right>
             <p className="fact">A goal of mine is to contribute to the initiatives that have encouraged me to pursue a career 
-              in technology, that is why I<mark>mentor</mark> at many Girl Learning Code events from Canada Learning Code</p>
+              in technology, that is why I<mark>mentor</mark> at Girl Learning Code events from Canada Learning Code</p>
             </Fade>
 
             <Fade right>
@@ -99,7 +99,7 @@ function RowExperience({job}) {
                       <ul>{bulletpoints}</ul>
                       <p className="tools"></p></p>}
       </Col>
-      <Col md="1">
+      <Col md="1" >
         <button className="arrow-down" onClick={handleClick}>
           {showMore ? <img src="minus.svg"></img> : <img src="arrowdown.svg"></img>}
         </button>
@@ -200,10 +200,10 @@ function CardFooter({apps}) {
   return (
     <div className="cardfooter">
       <Row className="row-cardfooter">
-        {apps.github && (<Col className="icon" md="auto"> <a href={apps.github[1]} target="_blank"> <img src="github.svg"></img> </a> </Col>)}
-        {apps.chrome && (<Col className="icon" md="auto"> <a href={apps.chrome[1]} target="_blank"> <img src="chrome.svg"></img> </a> </Col>)}
-        {apps.tableau && (<Col className="icon" md="auto"> <a href={apps.tableau[1]} target="_blank"> <img src="graph.svg"></img> </a> </Col>)}
-        {apps.link && (<Col className="icon" md="auto"> <a href={apps.link[1]} target="_blank"> <img src="link.svg"></img> </a> </Col>)}
+        {apps.github && (<Col className="icon" xs="3"> <a href={apps.github[1]} target="_blank"> <img src="github.svg"></img> </a> </Col>)}
+        {apps.chrome && (<Col className="icon" xs="3"> <a href={apps.chrome[1]} target="_blank"> <img src="chrome.svg"></img> </a> </Col>)}
+        {apps.tableau && (<Col className="icon" xs="3"> <a href={apps.tableau[1]} target="_blank"> <img src="graph.svg"></img> </a> </Col>)}
+        {apps.link && (<Col className="icon" xs="3"> <a href={apps.link[1]} target="_blank"> <img src="link.svg"></img> </a> </Col>)}
       </Row>
     </div>  
   );
@@ -278,13 +278,13 @@ function Contact() {
 
       <Slide bottom>
       <Row className="row-contact">
-        <Col className="contacticon">
+        <Col className="contacticon" xs="4">
           <a href="https://www.linkedin.com/in/lauryne-assa/" target="_blank"> <img className="contact-logo" src="linkedin.png"></img> </a>
         </Col>
-        <Col className="contacticon">
+        <Col className="contacticon" xs="4">
           <a href="https://github.com/lauryneada" target="_blank"> <img className="contact-logo" src="github-logo.png"></img></a>
         </Col>
-        <Col className="contacticon">
+        <Col className="contacticon" xs="4">
           <a href="mailto:lauryne.assa@gmail.com" target="_blank"><img className="contact-logo" src="gmail.png"></img> </a>
         </Col>
       </Row>
@@ -297,7 +297,7 @@ function Footer() {
   return(
     <div className="sectionfooter">
       <p className="endtext-top">Built & designed by Lauryne 👩🏾‍💻</p>
-      <p className="endtext">© 2024 Lauryne Assa</p>
+      <p className="endtext">© 2025 Lauryne Assa</p>
     </div>
   )
 }

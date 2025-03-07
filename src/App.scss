@@ -105,6 +105,7 @@ mark {
   border-radius: 8px;
   display:flex;
   padding: 15px;
+  margin-bottom:20px;
   //transition: all .5s ease-in-out;
   
   .desc {
@@ -136,6 +137,7 @@ mark {
 
     .icon{
       transition: transform .2s;
+   
     }
 
     a{
@@ -228,7 +230,7 @@ mark {
     font-weight: 600;
     color:#CED4DA;
     font-size:24px;
-    padding-left: 15px;
+    //padding-left: 15px;
   }
   
   .arrow-down{
@@ -239,7 +241,7 @@ mark {
   .date{
     font-size: 20px;
     color: #CED4DA;
-    padding-left: 15px;
+    //padding-left: 15px;
   }
 
   .moreinfo{
@@ -259,3 +261,56 @@ mark {
   background-color: red;
 }
 
+@media (max-width:500px) {
+  h1 {
+    font-size:45px;
+  }
+
+  h2{
+    font-size:40px;
+  }
+
+  p, mark{
+    font-size:18px;
+  }
+
+
+  .experience {
+    b, .maininfo {
+
+      font-size: 20px;
+    } 
+  }
+
+  .contact-logo{
+    width:75%;
+  }
+
+
+  .section {
+    margin-top:150px;
+    margin-bottom: 150px;
+  }
+
+  .arrow-down img{
+    width:80%;
+    padding-top:10px;
+  }
+
+  
+}
+
+@media (max-width:1000px) and (min-width:501px) {
+  .contact-logo{
+    width:65%;
+  }
+
+  h1 {
+    font-size:60px;
+  }
+
+  h2{
+    font-size:55px;
+  }
+
+}
