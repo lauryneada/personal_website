@@ -48,12 +48,12 @@ function About() {
       </Fade>
       <Container>
         <Row>
-          <Col classname="col-headshot">
+          <Col xs="12" sm="4" className="col-headshot">
             <img className="headshot" src="lauryne_headshot.png"></img>
           </Col>
 
           
-          <Col className="col-facts">
+          <Col xs="12" sm="8" className="col-facts">
             <Fade right>
             <p className="fact">I'm interested in the intersection of business and technology, so I'm working towards building a career that blends<mark>software engineering</mark>and<mark>finance</mark></p>
             </Fade>
@@ -180,7 +180,7 @@ function Card({project, children}) {
   return (
     <div className="card">
 
-        <div classname="card-img">
+        <div className="card-img">
           <img className="desc" src={project.img}></img>
         </div>
         

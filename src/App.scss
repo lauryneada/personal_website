@@ -108,6 +108,10 @@ mark {
   border-radius: 10px;
 }
 
+.col-headshot{
+  margin-bottom: 60px;
+}
+
 .col-card {
   display: flex;
   justify-content: center;
@@ -184,7 +188,7 @@ mark {
 }
 
 .contact-logo{
-  width: 30%;
+  width: 35%;
   height:auto;
   padding:25px;
   border-radius: 8px;
@@ -272,10 +276,10 @@ mark {
   }
 }
 
-
+// phone sizes
 @media (max-width:500px) {
   h1 {
-    font-size:45px;
+    font-size:41px;
   }
 
   h2{
@@ -295,7 +299,7 @@ mark {
   }
 
   .contact-logo{
-    width:75%;
+    width:90%;
   }
 
 
@@ -305,16 +309,17 @@ mark {
   }
 
   .arrow-down img{
-    width:80%;
+    //width:40%;
     padding-top:10px;
   }
 
   
 }
 
+// tablet sizes
 @media (max-width:1000px) and (min-width:501px) {
   .contact-logo{
-    width:65%;
+    width:60%;
   }
 
   h1 {
