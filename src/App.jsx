@@ -31,7 +31,7 @@ function Header() {
       <Fade>
        <p className="intro">I'm a double-degree student in<mark>computer science</mark>@ the University of Waterloo 
           and<mark>business administration</mark>@ Wilfrid Laurier University</p>
-       <p className="currently"> Currently: QTS Software Developer Intern @ RBC </p>
+       {/* <p className="currently"> Currently: QTS Software Developer Intern @ RBC </p> */}
       </Fade>
     </div>
    
@@ -121,7 +121,17 @@ function Experience() {
 
       <Slide bottom>
       <RowExperience job={{ company: "RBC Capital Markets",
-                            title: "Quantitative Technology Services Software Developer Intern",
+                            title: "QTS Software Developer Intern",
+                            date: "Jan - Apr 2025",
+                            bullets: ["Developed articles, pages and components using HTML, CSS, XML/XSLT, JavaScript and jQuery to support RBC Capital Markets’ websites, delivering valuable equity market and economic insights to 100k+ active users",
+                                      "Rebuilt a legacy internal expert-finding tool using Knockout.js and PHP to restore its functionality, reducing the time to find subject-matter experts by 60% and enhancing cross-functional collaboration",
+                                      "Enhanced an administrative dashboard application by resolving frontend issues in React and implementing event logging for key functions in a Node.js backend, improving user experience and developer debugging efficiency"],
+                            tools: "Tools: HTML, CSS, Javascript, jQuery, React, Node.js" }} />
+      </Slide>
+
+      <Slide bottom>
+      <RowExperience job={{ company: "RBC Capital Markets",
+                            title: "QTS Software Developer Intern",
                             date: "Jan - Apr 2024",
                             bullets: ["Implemented multiple production level workflows on Airflow (Python) that performed automated push reporting to improve the data accuracy of a $400M+ portfolio",
                                       "Maintained 3+ databases on Microsoft SQL Server by writing queries to backfill missing data, adding new fields and updating records",
