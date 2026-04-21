@@ -8,8 +8,8 @@ import Slide from 'react-reveal/Slide';
 
 function Nav() {
   return (
-    <div>
-      <Container>
+    <div className="sectionnav">
+      <Container >
         <Row className="sectionheader">
           <Col className="nav-item"><a href="#about">about</a></Col>
           <Col className="nav-item"><a href="#experience">experience</a></Col>
@@ -55,7 +55,7 @@ function About() {
           
           <Col xs="12" sm="8" className="col-facts">
             <Fade right>
-            <p className="fact">I'm interested in the intersection of business and technology, so I'm working towards building a career that blends<mark>software engineering</mark>and<mark>finance</mark></p>
+            <p className="fact">I enjoy working with numbers and data, whether building software to generate insights or developing systems that make data easier to work with. This draws me to roles in technology, finance or <mark>both</mark>!</p>
             </Fade>
 
             <Fade right>
@@ -83,7 +83,7 @@ function RowExperience({job}) {
     setShowMore(!showMore);
   }
 
-  const bulletpoints = job.bullets.map(bullet => <li>{bullet}</li>);
+  // const bulletpoints = job.bullets.map(bullet => <li>{bullet}</li>);
   
   return(
     <>
@@ -95,7 +95,7 @@ function RowExperience({job}) {
       <Col md="7" className="col-experience">
         <p className="maininfo">{job.title} <br></br></p><p className="tools">{job.tools}</p>
         {showMore && <p className="moreinfo">
-                      <ul>{bulletpoints}</ul>
+                        {job.desc}
                       <p className="tools"></p></p>}
       </Col>
       <Col md="1" >
@@ -120,12 +120,15 @@ function Experience() {
       </Fade>
 
       <Slide bottom>
+       <RowExperience job={{ company: "TD Securities",
+                            title: "Global Markets Intern",
+                            date: "Sep - Dec 2025",
+                            desc: "Developed automated models and algorithms that transform market data into index rebalancing and forecasting tools used to support trading decisions.",
+                            tools: "Tools: Python, Pandas, SQL, Excel, Bloomberg Terminal" }} />
       <RowExperience job={{ company: "RBC Capital Markets",
                             title: "QTS Software Developer Intern",
                             date: "Jan - Apr 2025",
-                            bullets: ["Developed articles, pages and components using HTML, CSS, XML/XSLT, JavaScript and jQuery to support RBC Capital Markets’ websites, delivering valuable equity market and economic insights to 100k+ active users",
-                                      "Rebuilt a legacy internal expert-finding tool using Knockout.js and PHP to restore its functionality, reducing the time to find subject-matter experts by 60% and enhancing cross-functional collaboration",
-                                      "Enhanced an administrative dashboard application by resolving frontend issues in React and implementing event logging for key functions in a Node.js backend, improving user experience and developer debugging efficiency"],
+                            desc: "Maintained external-facing web applications, delivering equity and macroeconomic insights to 100K+ users. Rebuilt and improved internal tools, including an expert-finding system and admin dashboards, reducing time to access internal expertise and improving team collaboration and system usability.",
                             tools: "Tools: HTML, CSS, Javascript, jQuery, React, Node.js" }} />
       </Slide>
 
@@ -133,52 +136,10 @@ function Experience() {
       <RowExperience job={{ company: "RBC Capital Markets",
                             title: "QTS Software Developer Intern",
                             date: "Jan - Apr 2024",
-                            bullets: ["Implemented multiple production level workflows on Airflow (Python) that performed automated push reporting to improve the data accuracy of a $400M+ portfolio",
-                                      "Maintained 3+ databases on Microsoft SQL Server by writing queries to backfill missing data, adding new fields and updating records",
-                                      "Integrated the Tableau REST API and an AWS S3 Bucket into Airflow to provide automated pull reporting centralized on a single platform, increasing analysis efficiency by 15%",
-                                      "Worked directly with directors, project managers and business managers to transform business objectives into technical solutions that were implemented, presented and delivered beating deadlines"],
+                            desc: "Built production data pipelines to automate reporting, data validation, and visualization for a $400M+ project portfolio.",
                             tools: "Tools: Python, SQL, Airflow, Microsoft SQL Server, Github, Helios, AWS" }} />
       </Slide>
 
-      <Slide bottom>
-      <RowExperience job={{ company: "STEMchats",
-                            title: "Technology Coordinator",
-                            date: "2021-2022",
-                            bullets: ["Developed responsive websites using HTML & SCSS along with Bootstrap",
-                                      "Implemented a web scraping feature using Python to fetch and store the website’s content",
-                                      "Designed wireframes for new websites which improved efficiency when developing collaboratively"],
-                            tools: "Tools: HTML, SCSS, Bootstrap, Javascript, Firebase, Python" }} />
-      </Slide>
-
-      <Slide bottom>
-      <RowExperience job={{ company: "Correlation One",
-                            title: "Data Science 4 All Fellow",
-                            date: "Apr - Aug 2021",
-                            bullets: ["Analyzed the issue of food insecurity through data cleaning and exploratory data analysis with Python and Jupyter",
-                                      "Enhanced the project with data visualization on an interactive Tableau dashboard and a detailed report of the research",
-                                      "Graduated with honours from the program and the final project was nominated a “Crowd Favorite”"],
-                            tools: "Tools: Python, Pandas, Seaborn, Matplotlib, Jupyter Notebook, Tableau" }} />
-      </Slide>
-
-      {/* <Slide bottom>
-      <RowExperience job={{ company: "Altimex Consulting",
-                            title: "Social Media Manager",
-                            date: "2020-2021",
-                            bullets: ["Implemented a digital marketing plan to grow a small business’ online presence",
-                                      "Managed multiple social media pages and used in-app analytics to track important key performance indicators",
-                                      "Created content catered to their target audience through articles on the website using WordPress"],
-                            tools: "Tools: WordPress, Meta Business Suite, Adobe InDesign, Adobe Premiere Pro" }} />
-      </Slide> */}
-      
-      <Slide bottom>
-      <RowExperience job={{ company: "Canada Learning Code",
-                            title: "Teen Ambassador",
-                            date: "2019-2022",
-                            bullets: ["Led a team of 5 to develop a website with exercises to combat teens’ stress levels and won 1st place in the hackathon",
-                                      "Created a medium-fidelity prototype for a productivity application",
-                                      "Mentored at Girls Learning Code workshops, providing assistance and feedback to young coders"],
-                            tools: "Tools: HTML, CSS, Javascript" }} />
-      </Slide>
     </div>
     
 
