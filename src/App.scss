@@ -103,7 +103,7 @@ mark {
 }
 
 .headshot {
-  max-width: 60%;
+  max-width: 80%;
   height:auto;
   border-radius: 10px;
 }
@@ -185,6 +185,35 @@ mark {
 .row-project{
   display: flex;
   justify-content: center;
+}
+
+.gallery-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  position: relative;
+}
+
+.gallery-arrow {
+  background: none;
+  border: none;
+  font-size: 50px;
+  color: white;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+
+  &:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 .contact-logo{

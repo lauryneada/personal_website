@@ -180,6 +180,61 @@ function CardFooter({apps}) {
 }
 
 function Projects() {
+  const [startIdx, setStartIdx] = useState(0);
+
+  const projects = [
+    {
+      img: "wandr.png",
+      title: "Wandr", 
+      technologies: ["Kotlin", "Supabase", 'Google Maps API'],
+      body: "Wandr is an android mobile app that helps people discover local itineraries and experiences. I built the app with a team of 4 as part of an app development class.",
+      footer: { link: [true, "https://youtu.be/kg_4aPlymGc"] }
+    },
+    {
+      img: "portfolio.png",
+      title: "Personal Website", 
+      technologies: ["React", "Javascript", "HTML", "SCSS"],
+      body: "The website you're currently on! This is a project I worked on to practice my Javascript and learn how to use React and plan to update as I learn more.",
+      footer: { github: [true, "https://github.com/lauryneada/portfolio-website"] }
+    },
+    {
+      img: "studyspace.png",
+      title: "StudySpace", 
+      technologies: ["Javascript", "HTML", "SCSS"],
+      body: "StudySpace is a productivity chrome extension that won 2nd place at the Queen's Programming Challenge in 2021.",
+      footer: { 
+        github: [true, "https://github.com/lauryneada/yourspace"], 
+        chrome: [true, "https://chrome.google.com/webstore/detail/yourspace/hbnjcjicdodldbfjcplllfdimjoocjmk?utm_source=app-launcher&authuser=0"], 
+        link: [true, "https://lauryneada.github.io/yourspace/"] 
+      }
+    },
+    {
+      img: "datascience.png",
+      title: "Data Analysis Project", 
+      technologies: ["Python", "Pandas", "Seaborn", "Matplotlib"],
+      body: "As part of DS4A, I contributed to a data analysis of the impact COVID-19 had on food insecurity. The project includes a report, datafolio, tableau dashboard and presentation all available on Github.",
+      footer: { 
+        github: [true, "https://github.com/lauryneada/COVID19_FoodInsecurity"], 
+        tableau: [true, "https://public.tableau.com/app/profile/lauryne/viz/TheImpactofCOVID-19onFoodInsecurity/FinalDashboard"],
+        link: [true, "https://www.correlation-one.com/blog/ds4a-capstone-project-spotlight-crowd-favorites"] 
+      }
+    }
+  ];
+
+  const handlePrev = () => {
+    setStartIdx((prev) => (prev - 1 + projects.length) % projects.length);
+  };
+
+  const handleNext = () => {
+    setStartIdx((prev) => (prev + 1) % projects.length);
+  };
+
+  const visibleProjects = [
+    projects[startIdx],
+    projects[(startIdx + 1) % projects.length],
+    projects[(startIdx + 2) % projects.length]
+  ];
+
   return (
     <div id="projects" className="section">
       <br></br>
@@ -189,51 +244,26 @@ function Projects() {
       </Fade>
 
       <Slide bottom>
-      <Row>
-      
-        <Col className="col-card">
-          <Card project = {{ img : "portfolio.png",
-                             title: "Personal Website", 
-                             technologies: ["React", "Javascript", "HTML", "SCSS"],
-                             body : "The website you're currently on! This is a project I worked on to practice my Javascript and learn how to use React" 
-                                  + " and plan to update as I learn more",
-                          }}>
+      <div className="gallery-container">
+        
+        <button className="gallery-arrow gallery-arrow-left" onClick={handlePrev}>
+          <img src="leftarrow.svg"></img>
+        </button>
 
-            <CardFooter apps={{ github:[true, "https://github.com/lauryneada/portfolio-website"] }}/>
+        <Row>
+          {visibleProjects.map((project, idx) => (
+            <Col key={idx} className="col-card">
+              <Card project={project}>
+                <CardFooter apps={project.footer}/>
+              </Card>
+            </Col>
+          ))}
+        </Row>
 
-          </Card>
-        </Col>
-
-        <Col className="col-card">
-          <Card project = {{ img : "studyspace.png",
-                             title: "StudySpace", 
-                             technologies: ["Javascript", "HTML", "SCSS"],
-                             body : "StudySpace is a productivity chrome extension that won 2nd place at the Queen's Programming Challenge in 2021",
-                          }}>
-            
-            <CardFooter apps={{ github:[true, "https://github.com/lauryneada/yourspace"], 
-                                chrome: [true, "https://chrome.google.com/webstore/detail/yourspace/hbnjcjicdodldbfjcplllfdimjoocjmk?utm_source=app-launcher&authuser=0"], 
-                                link: [true, "https://lauryneada.github.io/yourspace/"] }}/>
-          
-          </Card>
-        </Col>
-
-        <Col className="col-card">
-          <Card project = {{ img : "datascience.png",
-                             title: "Data Analysis Project", 
-                             technologies: ["Python", "Pandas", "Seaborn", "Matplotlib"],
-                             body : "As part of DS4A, I contributed to a data analysis of the impact COVID-19 had on food insecurity." +
-                                    " The project includes a report, datafolio, tableau dashboard and presentation all available on Github.",
-                          }}>
-
-          <CardFooter apps={{ github: [true, "https://github.com/lauryneada/COVID19_FoodInsecurity"], 
-                              tableau: [true, "https://public.tableau.com/app/profile/lauryne/viz/TheImpactofCOVID-19onFoodInsecurity/FinalDashboard"],
-                              link: [true, "https://www.correlation-one.com/blog/ds4a-capstone-project-spotlight-crowd-favorites"] }}/>
-
-          </Card>
-        </Col>
-
-      </Row>
+        <button className="gallery-arrow gallery-arrow-right" onClick={handleNext}>
+          <img src="rightarrow.svg"></img>
+        </button>
+      </div>
       </Slide>
     </div>
   );
